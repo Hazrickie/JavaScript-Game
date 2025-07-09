@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How To Play</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</html>
+<body>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="controlboard">
+
+        <h1 align="center" >How To Play</h1>
+    </div>
+
+
+    <div class="rilcontrol">
+<br>
+<br>
+<br>
+        <h2 align="center">In this game, you need to defend your base from getting attacked by the robots.</h2>
+        <br>
+        <br>
+        <h2 align="center">There are 3 level:</h2>
+        <br>
+        <h2 align="center">The Laboratory - Easy</h2>
+        <h2 align="center">City - Medium</h2>
+        <h2 align="center">Hell - Hard</h2>
+        <br>
+        <br>
+        <br>
+        <h2 align="center">To place tower, first click on the tower option. There are three types of tower:</h2>
+        <br>
+        <h2 align="center">Turret - Normal tower, nothing special</h2>
+        <h2 align="center">Rocket - Dealt more damage than turret</h2>
+        <h2 align="center">Farm - Gives 20 gold every 20 seconds</h2>
+        
+
+    </div>
+
+          <br>
+      <br>
+      <br>
+
+      <a href="index.html"> <button class="backButton" onclick="location.href='settings.html'"><h4>Back</h4></button></a>
+      <br>
+      <br>
+      <br>
+      <p class="credit" align="center">@Made by Arsyaz. All rights reserved.</p>
+      <script>
+window.addEventListener("load", function() {
+    let savedBrightness = localStorage.getItem("brightness");
+    let savedVolume = localStorage.getItem("volume");
+    let bgMusic = document.getElementById("bgMusic");
+
+    if (savedBrightness) {
+        document.body.style.filter = `brightness(${savedBrightness}%)`;
+    }
+
+    if (savedVolume) {
+        bgMusic.volume = savedVolume;
+    }
+});
+
+    </script>
+<iframe src="music.html" style="display: none;"></iframe>
+    
+
+      </body>
+      </html>

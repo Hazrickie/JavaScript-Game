@@ -1,0 +1,155 @@
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body
+{
+ min-height: 100vh;
+ background: #0c192c;
+
+}
+.container
+{
+ position: relative;
+ width: 100%;
+ height: 100vh;
+ overflow: hidden;
+}
+.bubbles
+{
+ position: relative;
+ display: flex;
+ z-index: -1; /* Moves bubbles to the background */
+}
+.bubbles span
+{
+ position: relative;
+ width: 30px;
+ height: 30px;
+ background: #4fc3dc;
+ margin: 0 4px;
+ border-radius: 50%;
+ box-shadow: 0 0 0 10px #4fc3dc44,
+ 0 0 50px #4fc3dc,
+ 0 0 100px #4fc3dc;
+ animation: animate 15s linear infinite;
+ animation-duration: calc(110s / var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;  
+}
+@keyframes animate
+{
+ 0%
+ {
+    transform: translateY(100vh) scale(0);
+ }
+ 100%
+ {
+    transform: translateY(-10vh) scale(1);
+ }
+}
+
+
+
+
+
+
+
+/* Content styling */
+.content {
+    position: relative;
+    z-index: 10; 
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+
+.title {
+    background-color: #00aaff; 
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    border: 3px solid #0053fe; 
+    border-radius: 10px; 
+    transition: 0.3s ease-in-out; 
+    display: inline-block;
+    font-family: Pixelify Sans;
+    margin-top: 40px;
+}
+
+
+.title:hover {
+    background-color: #00ffff; 
+    color: white; 
+    box-shadow: 0 0 15px #8000ff;
+    transform: scale(1.05); 
+}
+
+h4{
+
+    font-family: Pixelify Sans;
+    
+}
+
+.playbutton{
+
+    font-size: 40px;
+}
+
+
+.button{
+
+    background-color: #00aaff ;
+    border-radius: 30px;
+    padding-left: 100px ;
+    padding-right: 100px ;
+    margin-bottom: 50px;
+    transition: 0.3s ease-in-out;
+
+
+}
+.startbutton{
+
+    background-color: #00aaff ;
+    border-radius: 30px;
+    padding-left: 100px ;
+    padding-right: 100px ;
+    margin-bottom: 50px;
+    transition: 0.3s ease-in-out;
+
+
+}
+.button:hover {
+    background: darkblue;
+    transform: scale(1.05); 
+}
+
+.startbutton:hover {
+    background: darkblue;
+    transform: scale(1.05); 
+}
+
+.button h4{
+
+    font-size: 40px;
+}
+
+.startbutton h4{
+
+    font-size: 70px;
+}
+
+
+.credit{
+
+    font-family: Pixelify Sans;
+    font-size: 20px;
+}

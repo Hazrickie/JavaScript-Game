@@ -1,0 +1,590 @@
+.credit{
+
+    font-family: Pixelify Sans;
+    font-size: 20px;
+}
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body
+{
+ min-height: 100vh;
+ background: #0c192c;
+
+}
+.container
+{
+ position: relative;
+ width: 100%;
+ height: 100vh;
+ overflow: auto;
+}
+.bubbles
+{
+ position: relative;
+ display: flex;
+ z-index: -1; /* Moves bubbles to the background */
+}
+.bubbles span
+{
+ position: relative;
+ width: 30px;
+ height: 30px;
+ background: #4fc3dc;
+ margin: 0 4px;
+ border-radius: 50%;
+ box-shadow: 0 0 0 10px #4fc3dc44,
+ 0 0 50px #4fc3dc,
+ 0 0 100px #4fc3dc;
+ animation: animate 15s linear infinite;
+ animation-duration: calc(110s / var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;  
+}
+@keyframes animate
+{
+ 0%
+ {
+    transform: translateY(100vh) scale(0);
+ }
+ 100%
+ {
+    transform: translateY(-10vh) scale(1);
+ }
+}
+
+
+
+
+
+
+.backButton{
+
+    background-color: red;
+    border-radius: 30px;
+    padding-left: 100px ;
+    padding-right: 100px ;
+    margin-bottom: 50px;
+
+}
+
+.backButton:hover {
+    background: maroon;
+}
+
+.backButton h4{
+
+    font-size: 30px;
+}
+
+/*home page*/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Pixelify Sans;
+
+}
+.title-box {
+    position: absolute;
+    top: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 75px;
+    border-radius: 10px;
+    color: white;
+    font-size: 60px;
+    animation: tilt 2s infinite alternate ease-in-out;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: Pixelify Sans;
+}
+
+h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: Pixelify Sans;
+}
+.button {
+    padding: 15px 230px;
+    font-size: 1.5rem;
+    color: white;
+    background: #00aaff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+    border-color: #0053fe;
+
+    
+}
+.button:hover {
+    background: darkblue;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
+.sub-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+   
+}
+.sub-buttons .button {
+    padding: 10px 90px;
+    font-size: 1rem;
+}
+
+
+footer{
+
+        background: rgba(0, 0, 0, 0.7);    
+}
+
+/*Story page*/
+
+
+
+.storyboard {
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: #0053fe;
+    background-color: #00aaff;
+    margin-top: 5px;
+    margin-right: 500px;
+    margin-left: 500px;
+    padding-top: 3px;
+    padding-left:150px;
+    padding-right:200px;
+    
+}
+
+.storyboard h1{
+
+    font-size: 80px;
+    font-family: Pixelify Sans;
+    color: black;
+}
+
+.rilstory{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+
+}
+
+.rilstory p{
+
+    font-family: Pixelify Sans ;
+    font-size: 30px
+}
+
+.backbutton{
+
+
+    border-style: solid;
+    border-radius: 50px;
+    border-width:10px;
+    border-color: black;
+    background-color: red;
+    margin-top: 50px;
+    margin-right: 600px;
+    margin-left: 600px;
+    padding-top: 3px
+    
+
+}
+
+
+.backbutton h2{
+
+
+
+     font-size: 50px;
+     font-family: Pixelify Sans;
+}
+
+
+/*Control page*/
+
+.controlboard {
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: #0053fe;
+    background-color: #00aaff;
+    margin-top: 20px;
+    margin-right: 500px;
+    margin-left: 500px;
+    padding-top: 3px;
+    padding-left:150px;
+    padding-right:200px;
+    
+    
+}
+
+.controlboard h1{
+
+    font-size: 80px;
+    font-family: Pixelify Sans;
+}
+
+.rilcontrol{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: white;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 3px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+
+}
+
+.rilcontrol h2{
+
+    font-family: Pixelify Sans ;
+    font-size: 30px
+}
+
+.control{
+
+    display: flex;
+}
+
+.keyboard{
+
+    margin: 20px;
+}
+
+.mouse{
+
+    margin-left: 150px;
+}
+
+.backbutton{
+
+
+    border-style: solid;
+    border-radius: 50px;
+    border-width:10px;
+    border-color: black;
+    background-color: red;
+    margin-top: 50px;
+    margin-right: 600px;
+    margin-left: 600px;
+    padding-top: 3px
+    
+
+}
+
+
+.backbutton h2{
+
+
+
+     font-size: 50px;
+     font-family: Pixelify Sans;
+}
+
+
+/*level page*/
+
+.boardlevel {
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: #0053fe;
+    background-color: #00aaff;
+    margin-top: 30px;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-bottom: 100px;
+    padding-left:130px;
+    padding-right:200px;
+    color: black;
+    
+    
+    
+}
+
+.boardlevel h1{
+
+    font-size: 80px;
+    font-family: Pixelify Sans;
+}
+
+
+.rillevel{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: white;
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 20px;
+    padding-left: 100px;
+    display: flex;
+    
+
+}
+
+.laboratory{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: #00aaff;
+    margin: 30px;
+    color: black;
+
+
+
+}
+
+
+
+.laboratory p{
+
+  font-family: Pixelify Sans;
+  font-size: 30px;
+}
+
+.city p{
+
+    font-family: Pixelify Sans;
+    font-size: 30px;
+  }
+.city{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: #00aaff;
+    margin: 30px;
+    margin-left: 40px;
+    color: black;
+
+
+
+}
+
+
+.city img{
+
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+
+}
+
+
+.hell{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: #00aaff;
+    margin: 30px;
+    color: black;
+
+
+
+}
+
+
+.hell img{
+
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+
+
+}
+.hell p{
+
+    font-family: Pixelify Sans;
+    font-size: 30px;
+  }
+
+
+
+/*about page*/
+
+.aboutboard {
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: #0053fe;
+    background-color: #00aaff;
+    margin-top: 5px;
+    margin-right: 400px;
+    margin-left: 400px;
+    padding-top: 3px;
+    padding-left:200px;
+    padding-right:200px;
+    
+}
+
+.aboutboard h1{
+
+    font-size: 80px;
+    font-family: Pixelify Sans;
+    color: black;
+}
+
+.rilabout{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+
+}
+
+.rilabout p{
+
+    font-family: Pixelify Sans ;
+    font-size: 30px
+}
+
+
+.member{
+
+    display: flex;
+}
+
+.rilabout img{
+
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.hazeeq{
+
+    margin: 30px;
+    margin-left: 50px;
+}
+
+.acap{
+
+    margin: 30px;
+    margin-right: 50px;
+}
+
+
+/*Settings page*/
+
+.settingsboard {
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: #0053fe;
+    background-color: #00aaff;
+    margin-top: 5px;
+    margin-right: 400px;
+    margin-left: 400px;
+    padding-top: 3px;
+    padding-left:200px;
+    padding-right:200px;
+    
+}
+
+.settingsboard h1{
+
+    font-size: 80px;
+    font-family: Pixelify Sans;
+    color: black;
+}
+
+.rilsettings{
+
+    border-style: solid;
+    border-radius: 20px;
+    border-width:10px;
+    border-color: black;
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+
+}
+
+.rilsettings p{
+
+    font-family: Pixelify Sans ;
+    font-size: 30px
+}

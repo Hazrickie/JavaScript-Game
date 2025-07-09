@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Promotion Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #111;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
+            transition: background 0.3s;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+
+        .nav-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 0.5em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff3333;
+        }
+
+        .search-bar {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.5em 2.5em 0.5em 1em;
+            border-radius: 20px;
+            border: none;
+            background: #333;
+            color: #fff;
+            outline: none;
+            font-size: 1em;
+        }
+
+        .search-bar .fa-search {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff3333;
+        }
+
+        .nav-icons i {
+            font-size: 1.2em;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: #ff3333;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('PromotionHomeScreenBackground.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 5em;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            animation: fadeIn 1.5s ease;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2em;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 0.75em 1.5em;
+            background-color: #ff3333;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #ff6666;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4em 2em;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #333;
+            padding: 1.5em;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background-color: #444;
+        }
+
+        .card i {
+            font-size: 2em;
+            color: #ff3333;
+            margin-bottom: 0.5em;
+        }
+
+        /* Trailer Section */
+        .trailer {
+            padding: 4em 2em;
+            background-color: #111;
+            text-align: center;
+        }
+
+        .trailer h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 1300px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Characters Section */
+        .characters {
+            padding: 4em 2em;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .characters h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .character-list {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        .character {
+            background-size: cover;
+            background-position: center;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .character h3 {
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            text-align: center;
+            padding: 0.5em;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .character:hover {
+            transform: scale(1.05);
+        }
+
+        /* Download Section */
+        .download {
+            padding: 4em 2em;
+            background-color: #111;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 1.5em 3em;
+            background-color: #ff3333;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #ff6666;
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <div class="nav-logo">
+                <img src="asets/PromotionHomeScreenLogo.png" alt="Game Logo">
+            </div>
+            <div class="nav-links">
+                <a href="homeWeb.html">Home</a>
+                <a href="aboutWeb.html">About</a>
+                <a href="devWeb.html">Developer</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Override: AI Uprising</h1>
+            <p>"Defend the last firewall. Fight the future."</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Game Features</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <i class="fas fa-dragon"></i>
+                <h3>Strategic Gameplay</h3>
+                <p>Engage in strategic fighting to defend your base</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mountain"></i>
+                <h3>Immersive World</h3>
+                <p>Explore beautifully crafted landscapes and hidden secrets.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Tower</h3>
+                <p>Unlock powerful tower to help you dominate the game</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay Trailer Section -->
+    <section id="trailer" class="trailer">
+        <h2>Game visual</h2>
+        <div class="video-container">
+            <img src="asets/PromotionGameVisual.jpg" alt="Game visual">
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="characters">
+        <h2>Tower list</h2>
+        <div class="character-list">
+            <div class="character" style="background-image: url('asets/Tower1.png');">
+                <h3>turret</h3>
+            </div>
+            <div class="character" style="background-image: url('asets/Tower3.png');">
+                <h3>Rocket</h3>
+            </div>
+            <div class="character" style="background-image: url('asets/Tower5.png');">
+                <h3>farm</h3>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Promotion Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #111;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.85); /* Semi-transparent background */
+            transition: background 0.3s;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+        }
+
+        .nav-logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 0.5em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff3333;
+        }
+
+        .search-bar {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.5em 2.5em 0.5em 1em;
+            border-radius: 20px;
+            border: none;
+            background: #333;
+            color: #fff;
+            outline: none;
+            font-size: 1em;
+        }
+
+        .search-bar .fa-search {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff3333;
+        }
+
+        .nav-icons i {
+            font-size: 1.2em;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: #ff3333;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('Game.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 5em;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            animation: fadeIn 1.5s ease;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2em;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 0.75em 1.5em;
+            background-color: #ff3333;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #ff6666;
+        }
+
+        /* Origins section */
+        .origins-section {
+            padding: 50px;
+            background-color: light-dark;
+            text-align: center;
+        }
+        .origins-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .origins-paragraph {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .origins-image {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .timeline-container {
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline-entry {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .timeline-entry-left {
+            flex-direction: row;
+        }
+
+        .timeline-entry-right {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-image {
+            width: 35%;
+            border-radius: 8.5px;
+            margin: 8.5px;
+        }
+
+        .timeline-entry-content {
+            width: 60%;
+            padding: 50px;
+            background-color: #222;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+
+        /* Download Section */
+        .download {
+            padding: 4em 2em;
+            background-color: #111;
+            text-align: center;
+        }
+
+        .download h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 1.5em 3em;
+            background-color: #ff3333;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: #ff6666;
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <div class="nav-logo">
+                <img src="asets/PromotionHomeScreenLogo.png" alt="Game Logo">
+            </div>
+            <div class="nav-links">
+                <a href="homeWeb.html">Home</a>
+                <a href="aboutWeb.html">About</a>
+                <a href="devWeb.html">Developer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover the game</h1>
+            <p>An epic journey awaits you. Are you ready to conquer?</p>
+            
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="origins-section">
+            <h2 class="origins-title">About the game</h2>
+            <p class="origins-paragraph">
+                In this action-packed tower defense game, players must protect a vital base from an onslaught of rogue AI system. After the AI has successfully overridden the city's defenses, it begins attacking the city with dangerous machines that threaten to overrun the base. As the Commander, you must strategically deploy towers, utilize special abilities, and manage resources to fend off waves of relentless robotic creatures. Will you be able to defend the base and stop the AI’s invasion, or will they take over? The fate of the metropolis is in your hands!
+            </p>
+            <img class="origins-image" src="asets/gameplay.png" alt="gameplay">
+            <br>
+            <img class="origins-image" src="asets/gameplay2.png" alt="gameplay">
+        </section>
+
+    <!-- Characters Section -->
+    <section class="timeline-container">
+
+    <div class="timeline-entry timeline-entry-right">
+        <img src="asets/Tower1.png" alt="thief" class="timeline-image">
+        <div class="timeline-entry-content">
+            <h3>Turret</h3>
+            <p>Shoot a bullet on the enemies</p>
+        </div>
+    </div>
+
+
+
+ 
+ <div class="timeline-entry timeline-entry-left">
+        <img src="asets/Tower3.png" alt="thief" class="timeline-image">
+        <div class="timeline-entry-content">
+            <h3>Rocket</h3>
+            <p>Shoot rockets and deal more damage</p>
+        </div>
+    </div>
+
+    <div class="timeline-entry timeline-entry-right">
+        <img src="asets/Tower5.png" alt="thief" class="timeline-image">
+        <div class="timeline-entry-content">
+            <h3>Farm</h3>
+            <p>Generate income every few seconds</p>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <h2>What are you waiting? Play now!</h2>
+        <div class="download-buttons">
+            <a href="index.html" class="hero-btn">Play Now</a>
+        </div>
+    </section>
+</body>
+</html>

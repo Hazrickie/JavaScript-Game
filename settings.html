@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</html>
+<body>
+
+    <div class="container">
+        <div class="bubbles">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:28"></span>
+        </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="settingsboard">
+
+        <h1 align="center" >Settings</h1>
+    </div>
+
+
+    <div class="rilsettings">
+
+
+        <div id="settingsPanel">
+            <h2>Game Settings</h2>
+            <br><br>
+            <label for="brightnessSlider">Brightness:</label>
+            <input type="range" id="brightnessSlider" min="50" max="200" value="100" class="slider">
+            <br><br>
+            <label for="volumeSlider">Volume:</label>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5" class="slider">
+            <br><br>
+            
+        </div>
+        </div><br><br><br>
+        <a href="index.html"> <button class="backButton" onclick="location.href='settings.html'"><h4>Back</h4></button></a>
+        <audio id="bgMusic" loop>
+            <source src="asets/bgmusic1.mp3" type="audio/mpeg">
+        </audio>
+
+        <script>
+
+
+
+            function toggleSettings() {
+                let panel = document.getElementById("settingsPanel");
+                panel.style.display = (panel.style.display === "none" || panel.style.display === "") ? "block" : "none";
+            }
+
+ 
+            document.getElementById("brightnessSlider").addEventListener("input", function() {
+                document.body.style.filter = `brightness(${this.value}%)`;
+            });
+
+            document.getElementById("volumeSlider").addEventListener("input", function() {
+                document.getElementById("bgMusic").volume = this.value;
+            });
+
+            document.getElementById("bgMusic").play(); // Auto-play music on start
+
+            function restartGame() {
+                console.log("Game restarting...");
+                location.reload();
+            }
+
+
+
+
+    document.getElementById("brightnessSlider").addEventListener("input", function() {
+    let brightnessValue = this.value;
+    localStorage.setItem("brightness", brightnessValue); // Save brightness
+    document.body.style.filter = `brightness(${brightnessValue}%)`;
+});
+
+document.getElementById("volumeSlider").addEventListener("input", function() {
+    let volumeValue = this.value;
+    localStorage.setItem("volume", volumeValue); // Save volume
+    document.getElementById("bgMusic").volume = volumeValue;
+});
+
+        </script>
+
+</body></html>
